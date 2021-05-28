@@ -14,8 +14,10 @@ app.get('/', function(req, res) {
 
     const today = new Date();
 
-    options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    const day = today.toLocaleDateString("en-US", options);
+    // options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    // const day = today.toLocaleDateString("en-US", options);
+
+    const day = today;
 
     res.render('list', { kindOfDay: day, newItems: items });
 });
@@ -25,6 +27,10 @@ app.post('/', function(req, res) {
     items.push(item);
 
     res.redirect("/");
+});
+
+app.post('/delete', function(req, res) {
+    console.log(req);
 });
 
 app.listen(process.env.PORT || port, function() {

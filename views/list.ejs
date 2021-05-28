@@ -35,11 +35,16 @@
     <div class="box p-3" id="item-box">
         <% for (let i=0; i<newItems.length; i++) { %>
 
-            <div class="item px-3 py-1 d-flex align-items-center flex-row">
-                <input type="checkbox" class="m-2">
-                <p class="p-1 pl-3 mb-0">
-                    <%= newItems[i] %>
-                </p>
+            <div class="item px-3 py-1 d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center flex-row ">
+                    <input type="checkbox" class="m-2">
+                    <p class="p-1 pl-3 mb-0">
+                        <%= newItems[i] %>
+                    </p>
+                </div>
+                <div>
+                    <button onclick="deleteItem(<%=i %>)"><div class="delete d-flex align-items-center justify-content-center"><i class="fas fa-minus"></i></div></button>
+                </div>
             </div>
             <% } %>
 
@@ -50,6 +55,8 @@
                 </form>
 
     </div>
+
+    <script src="js/script.js"></script>
 
 </body>
 
