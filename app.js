@@ -8,7 +8,6 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use(express.json({ limit: '1mb' }));
 
 let items = [];
 
