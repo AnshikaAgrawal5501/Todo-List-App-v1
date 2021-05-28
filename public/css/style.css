@@ -50,6 +50,11 @@ input[type="checkbox"] {
     width: 15px;
 }
 
+a {
+    text-decoration: none;
+    color: white !important;
+}
+
 p,
  ::placeholder {
     font-size: 30px;
